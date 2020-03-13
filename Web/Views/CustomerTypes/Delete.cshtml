@@ -1,0 +1,27 @@
+﻿@model Common.Models.CustomerType
+
+@{
+    ViewData["Title"] = "Borrar categoria";
+}
+
+    <h1>@ViewData["Title"]</h1>
+
+    <h3>Desea borrar esta categoria?</h3>
+<div>
+    <h4>CustomerType</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Borrar" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-info">Volver a listado</a>
+    </form>
+</div>
